@@ -1,0 +1,154 @@
+/* roboto regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+/* sections */
+.section-start {
+    border-bottom: 1px solid #dcd9d9;
+}
+
+.section-Even {
+    background-color: whitesmoke;
+    box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.3), inset 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.section-Odd {
+    border-block: 1px solid #dcd9d9;
+}
+
+.about, 
+.experience, 
+.education, 
+.Certifications, 
+.Projects, 
+.Skills, 
+.Contact {
+    padding: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    margin-bottom: 30px;
+}
+
+/* header */
+
+/* lead */
+.lead {
+    background-image: url('../assets/images/lead-BG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-color {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33,125,187, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* backdrop-filter: blur(2px); */ /* lagged te veel */
+}
+
+ .lead-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lead-content > h1 {
+    color: white;
+    text-transform: capitalize;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.lead-content > h2 {
+    color: 	rgb(135,206,250);
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.lead-content > a {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.lead-content > a:hover {
+    background-color: white;
+    color: rgba(33,125,187, 0.7);
+}
+
+/* about me */
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-text-container > p {
+    margin-bottom: 1rem;
+}
+
+.portrait {
+    height: 20rem;
+    border-radius: 50%;
+    border: 1px solid #000;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    margin-left: 0.5rem;
+}
+
+/* experience */
+
+/* education */
+.education-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-card {
+    padding: 15px;
+    margin: 0 auto 30px auto;
+    border: 1px solid #dcd9d9;
+    width: 44rem;
+}
+
+/* certifications */
+
+/* projects */
+
+/* skills */
+
+/* contact */
+.Contact {
+    background-color: rgb(33,125,187);
+}
+
+/* footer */
