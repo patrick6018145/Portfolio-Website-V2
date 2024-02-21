@@ -2,22 +2,27 @@ import { updatebirthday } from './modules/birthday.js';
 import { EducationCard } from './modules/educationCards.js';
 import { updateTime } from './modules/time.js';
 
+const educationCards = [
+    new EducationCard(
+        'mboRijnland',
+        'aug 2023',
+        'Heden (zit in het 1e jaar)',
+        'MBO 4 Software Developer',
+        'Ik ben momenteel bezig met een MBO 4 opleiding tot Software Developer. Ik leer hier onder andere over HTML, CSS, JavaScript, PHP, en MySQL.'
+    ),
+
+    new EducationCard(
+        'ROC van Amsterdam',
+        'aug 2021',
+        'feb 2023',
+        'MBO 2 Medewerker Business Services',
+        'Ik heb een MBO 2 opleiding gevolgd tot Medewerker Business Services. Tijdens deze opleiding heb ik kennis opgedaan over administratie, klantcontact en het gebruik van Microsoft Office. Daarnaast kreeg ik ook enige instructie op het gebied van ICT, zoals het bouwen van een computer en een introductie tot coderen via het leertraject van de BitAcademy.'
+    ),
+];
+
 setInterval(updateTime, 1000);
 updatebirthday();
 
-const educationCards = [
-    new EducationCard(
-        'University of California, Los Angeles',
-        'September 2016',
-        'June 2020',
-        'B.S. Computer Science',
-        'I graduated from UCLA with a B.S. in Computer Science. I took a variety of courses including Data Structures, Algorithms, and Computer Networks.'
-    ),
-    new EducationCard(
-        'University of California, Los Angeles',
-        'September 2016',
-        'June 2020',
-        'B.A. Linguistics',
-        'I also graduated from UCLA with a B.A. in Linguistics. I took a variety of courses including Phonetics, Syntax, and Semantics.'
-    )
-];
+educationCards.forEach(card => {
+    card.appendTo('education-cards');
+});
