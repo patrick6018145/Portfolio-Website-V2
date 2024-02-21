@@ -1,5 +1,6 @@
 import { updatebirthday } from './modules/birthday.js';
-import { EducationCard } from './modules/educationCards.js';
+import { EducationCard } from './modules/cards.js';
+import { ProjectCard } from './modules/cards.js';
 import { updateTime } from './modules/time.js';
 
 const educationCards = [
@@ -18,6 +19,13 @@ const educationCards = [
         'MBO 2 Medewerker Business Services',
         'Ik heb een MBO 2 opleiding gevolgd tot Medewerker Business Services. Tijdens deze opleiding heb ik kennis opgedaan over administratie, klantcontact en het gebruik van Microsoft Office. Daarnaast kreeg ik ook enige instructie op het gebied van ICT, zoals het bouwen van een computer en een introductie tot coderen via het leertraject van de BitAcademy.'
     ),
+];
+
+const projectCards = [
+    new ProjectCard(
+        'Portfolio Website',
+        'Dit is de website die je nu bekijkt. Ik heb deze website gemaakt om mijn portfolio te laten zien. De website is gemaakt met HTML, CSS, JavaScript en Node.js.',
+    )
 ];
 
 setInterval(updateTime, 1000);

@@ -151,9 +151,16 @@ h4 {
     margin: 0 auto 30px auto;
     border: 1px solid #dcd9d9;
     width: 70%; /* 44rem */
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .education-card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-card-title-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
