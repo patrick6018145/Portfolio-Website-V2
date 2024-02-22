@@ -65,6 +65,26 @@ export class EducationCard extends Card {
     }
 }
 
+export class CertificationCard extends Card {
+    constructor(title, date, description='') {
+        super(title, description);
+        this._date = date;
+    }
+
+    createCard() {
+        const card = super.createCard('certification-card');
+
+        const titleRow = card.querySelector('.certification-card-title-row');
+
+        const date = document.createElement('p');
+        date.textContent = this._date;
+        titleRow.appendChild(date);
+
+        return card;
+    }
+
+}
+
 export class ProjectCard extends Card {
     constructor(title, description, link, imageSrc='') {
         super(title, description);
@@ -75,13 +95,15 @@ export class ProjectCard extends Card {
     createCard() {
         const card = super.createCard('project-card');
 
-        const titleRow = card.querySelector('.project-card-header');
+        const projectCardText = document.createElement('div');
+        projectCardText.classList.add('project-card-text');
+        card.appendChild(projectCardText);
 
         const link = document.createElement('a');
         link.href = this._link;
         link.target = '_blank';
         link.textContent = 'Bekijk project';
-        card.appendChild(link);
+        projectCardText.appendChild(link);
 
         const image = document.createElement('img');
         image.src = this._imageSrc;
