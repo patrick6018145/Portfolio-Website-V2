@@ -211,8 +211,6 @@ h4 {
     color: black;
     text-transform: capitalize;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
 }
 
 .certification-card-text > a:hover {
