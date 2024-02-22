@@ -36,7 +36,7 @@ const projectCards = [
         'Dit is de website die je nu bekijkt. Ik heb deze website gemaakt om mijn portfolio te laten zien. De website is gemaakt met HTML, CSS en JavaScript.',
         'https://github.com/patrick6018145/Portfolio-Website-V2',
         'Bekijk op GitHub',
-        './assets/images/projects/portfolio-website.png'
+        './assets/images/projects/portfolio-website-V2.png'
     ),
 ];
 
