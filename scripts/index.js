@@ -25,8 +25,10 @@ const educationCards = [
 const certificationCards = [
     new CertificationCard(
         'Certified ScrumMaster',
-        'feb 2023',
-        'Ik heb een certificaat behaald voor het Certified ScrumMaster examen. Dit certificaat toont aan dat ik kennis heb van de Scrum methodiek en in staat ben om een Scrum team te leiden.'
+        'nov 2023',
+        'Ik heb een certificaat behaald voor het Certified ScrumMaster examen. Dit certificaat toont aan dat ik kennis heb van de Scrum methodiek en in staat ben om een Scrum team te leiden.',
+        'https://www.codecademy.com/profiles/patrick982/certificates/c87ba0541f8be78bc2f4ba1128233f6f',
+        './assets/images/certifications/codecademy-commandLine.png'
     ),
 ];
 

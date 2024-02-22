@@ -44,14 +44,14 @@ h4 {
 .Projects, 
 .Skills, 
 .Contact {
-    padding: 50px 15px;
+    padding: 3.125rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .heading {
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 /* header */
@@ -147,8 +147,8 @@ h4 {
 }
 
 .education-card {
-    padding: 15px;
-    margin: 0 auto 30px auto;
+    padding: 1rem;
+    margin: 0 auto 2rem auto;
     border: 1px solid #dcd9d9;
     width: 70%; /* 44rem */
     display: flex;
@@ -167,10 +167,51 @@ h4 {
 }
 
 /* certifications */
+.certification-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 70%;
+}
+
+.certification-card {
+    margin: 0 auto 2rem auto;
+    border: 1px solid #dcd9d9;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.certification-card-text {
+    border-top: 1px solid #dcd9d9;
+    padding: 1rem;
+}
+
+.certification-card-title-row{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.certification-card-text > p {
+    margin-bottom: 1rem;
+}
+
+.certification-card-text > a {
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.certification-card-text > a:hover {
+    color: rgba(33,125,187, 0.7);
+}
 
 /* projects */
 .project-card {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 2rem auto;
     border: 1px solid #dcd9d9;
     width: 70%; /* 44rem */
     display: flex;

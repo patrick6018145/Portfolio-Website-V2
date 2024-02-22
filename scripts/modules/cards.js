@@ -66,9 +66,11 @@ export class EducationCard extends Card {
 }
 
 export class CertificationCard extends Card {
-    constructor(title, date, description='') {
+    constructor(title, date, description='', link, imageSrc) {
         super(title, description);
         this._date = date;
+        this._link = link;
+        this._imageSrc = imageSrc;
     }
 
     createCard() {
@@ -84,6 +86,10 @@ export class CertificationCard extends Card {
 
         const title = card.querySelector('div.certification-card-title-row');
         certificationCardText.insertBefore(title, certificationCardText.firstChild);
+
+        const date = document.createElement('p');
+        date.textContent = this._date;
+        title.appendChild(date);
 
         const description = card.querySelector('p');
         certificationCardText.insertBefore(description, certificationCardText.secondChild);
