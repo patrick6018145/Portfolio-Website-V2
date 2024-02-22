@@ -39,7 +39,7 @@ const projectCards = [
         'https://github.com/patrick6018145/Portfolio-Website-V2',
         'Bekijk op GitHub',
         './assets/images/projects/portfolio-website-V2.png'
-    ),
+    )
 ];
 
 setInterval(updateTime, 1000);
