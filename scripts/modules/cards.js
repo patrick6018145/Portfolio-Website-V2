@@ -100,9 +100,10 @@ export class CertificationCard extends Card {
 }
 
 export class ProjectCard extends Card {
-    constructor(title, description, link, imageSrc='') {
+    constructor(title, description, link, linkText, imageSrc='') {
         super(title, description);
         this._link = link;
+        this._linkText = linkText;
         this._imageSrc = imageSrc;
     }
 
@@ -126,7 +127,7 @@ export class ProjectCard extends Card {
         const link = document.createElement('a');
         link.href = this._link;
         link.target = '_blank';
-        link.textContent = 'Bekijk project';
+        link.textContent = this._linkText;
         projectCardText.appendChild(link);
 
         return card;
