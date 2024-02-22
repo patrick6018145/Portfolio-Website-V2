@@ -30,7 +30,7 @@ const certificationCards = [
         'Ik heb een certificaat behaald voor de Command Line. Dit certificaat toont aan dat ik kennis heb van de command line-interface.',
         'https://www.codecademy.com/profiles/patrick982/certificates/c87ba0541f8be78bc2f4ba1128233f6f',
         './assets/images/certifications/codecademy-commandLine.png'
-    ),
+    )
 ];
 
 const projectCards = [
