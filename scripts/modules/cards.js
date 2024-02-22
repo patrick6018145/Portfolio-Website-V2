@@ -74,11 +74,25 @@ export class CertificationCard extends Card {
     createCard() {
         const card = super.createCard('certification-card');
 
-        const titleRow = card.querySelector('.certification-card-title-row');
+        const image = document.createElement('img');
+        image.src = this._imageSrc;
+        card.appendChild(image);
 
-        const date = document.createElement('p');
-        date.textContent = this._date;
-        titleRow.appendChild(date);
+        const certificationCardText = document.createElement('div');
+        certificationCardText.classList.add('certification-card-text');
+        card.appendChild(certificationCardText);
+
+        const title = card.querySelector('div.certification-card-title-row');
+        certificationCardText.insertBefore(title, certificationCardText.firstChild);
+
+        const description = card.querySelector('p');
+        certificationCardText.insertBefore(description, certificationCardText.secondChild);
+
+        const link = document.createElement('a');
+        link.href = this._link;
+        link.target = '_blank';
+        link.textContent = 'Bekijk certificaat';
+        certificationCardText.appendChild(link);
 
         return card;
     }
@@ -95,19 +109,25 @@ export class ProjectCard extends Card {
     createCard() {
         const card = super.createCard('project-card');
 
+        const image = document.createElement('img');
+        image.src = this._imageSrc;
+        card.appendChild(image);
+
         const projectCardText = document.createElement('div');
         projectCardText.classList.add('project-card-text');
         card.appendChild(projectCardText);
+
+        const title = card.querySelector('div.project-card-title-row');
+        projectCardText.insertBefore(title, projectCardText.firstChild);
+
+        const description = card.querySelector('p');
+        projectCardText.insertBefore(description, projectCardText.secondChild);
 
         const link = document.createElement('a');
         link.href = this._link;
         link.target = '_blank';
         link.textContent = 'Bekijk project';
         projectCardText.appendChild(link);
-
-        const image = document.createElement('img');
-        image.src = this._imageSrc;
-        card.appendChild(image);
 
         return card;
     }
