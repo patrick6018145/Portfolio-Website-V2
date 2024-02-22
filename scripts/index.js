@@ -2,6 +2,7 @@ import { updatebirthday } from './modules/birthday.js';
 import { EducationCard } from './modules/cards.js';
 import { CertificationCard } from './modules/cards.js';
 import { ProjectCard } from './modules/cards.js';
+import { scrollDown100vh } from './modules/scrollDown100vh.js';
 import { updateTime } from './modules/time.js';
 
 const educationCards = [
@@ -24,9 +25,9 @@ const educationCards = [
 
 const certificationCards = [
     new CertificationCard(
-        'Certified ScrumMaster',
+        'Command Line',
         'nov 2023',
-        'Ik heb een certificaat behaald voor het Certified ScrumMaster examen. Dit certificaat toont aan dat ik kennis heb van de Scrum methodiek en in staat ben om een Scrum team te leiden.',
+        'Ik heb een certificaat behaald voor de Command Line. Dit certificaat toont aan dat ik kennis heb van de command line-interface.',
         'https://www.codecademy.com/profiles/patrick982/certificates/c87ba0541f8be78bc2f4ba1128233f6f',
         './assets/images/certifications/codecademy-commandLine.png'
     ),
@@ -43,6 +44,7 @@ const projectCards = [
 ];
 
 setInterval(updateTime, 1000);
+scrollDown100vh();
 updatebirthday();
 
 educationCards.forEach(card => {

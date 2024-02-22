@@ -106,9 +106,17 @@ h4 {
     transition: 0.3s;
 }
 
-.lead-content > a:hover {
-    background-color: white;
-    color: rgba(33,125,187, 0.7);
+.lead-chevron-down {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 2px solid rgb(135,206,250);
+    border-radius: 50%;
 }
 
 /* about me */
@@ -203,6 +211,8 @@ h4 {
     color: black;
     text-transform: capitalize;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .certification-card-text > a:hover {
