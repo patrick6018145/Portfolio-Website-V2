@@ -2,6 +2,7 @@ import { updatebirthday } from './modules/birthday.js';
 import { EducationCard } from './modules/cards.js';
 import { CertificationCard } from './modules/cards.js';
 import { ProjectCard } from './modules/cards.js';
+import { SkillCard } from './modules/cards.js';
 import { scrollDown100vh } from './modules/scrollDown100vh.js';
 import { updateTime } from './modules/time.js';
 
@@ -43,6 +44,29 @@ const projectCards = [
     )
 ];
 
+const SkillCards = [
+    new SkillCard(
+        'HTML',
+        'fa-html5'
+    ),
+
+    new SkillCard(
+        'CSS',
+        'fa-css3-alt'
+    ),
+
+    new SkillCard(
+        'JavaScript',
+        'fa-js'
+    ),
+
+    new SkillCard(
+        'PHP',
+        'fa-php'
+    ),
+    
+];
+
 setInterval(updateTime, 1000);
 scrollDown100vh();
 updatebirthday();
@@ -57,4 +81,8 @@ certificationCards.forEach(card => {
 
 projectCards.forEach(card => {
     card.appendTo('project-cards');
+});
+
+SkillCards.forEach(card => {
+    card.appendTo('skill-cards');
 });

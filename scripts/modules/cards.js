@@ -139,3 +139,36 @@ export class ProjectCard extends Card {
         return card;
     }
 }
+
+export class SkillCard {
+    constructor(title, icon, iconType='fa-brands') {
+        this._title = title;
+        this._icon = icon;
+        this._iconType = iconType;
+    }
+
+    createCard() {
+        const card = document.createElement('article');
+        card.classList.add('skill-card');
+
+        const title = document.createElement('h3');
+        title.textContent = this._title;
+        card.appendChild(title);
+
+        const icon = document.createElement('i');
+        icon.classList.add(`${this._iconType}`, `${this._icon}`); //fa-
+        card.appendChild(icon);
+
+        return card;
+    }
+
+    appendTo(parentElement, cardClass) {
+        const container = document.getElementById(parentElement);
+        if (container) {
+            const card = this.createCard(cardClass);
+            container.appendChild(card);
+        } else {
+            console.error('Parent element does not exist');
+        }
+    }
+}
