@@ -1,10 +1,7 @@
 import { updatebirthday } from './modules/birthday.js';
-import { EducationCard } from './modules/cards.js';
-import { CertificationCard } from './modules/cards.js';
-import { ProjectCard } from './modules/cards.js';
-import { SkillCard } from './modules/cards.js';
 import { scrollDown100vh } from './modules/scrollDown100vh.js';
 import { updateTime } from './modules/time.js';
+import { EducationCard, CertificationCard, ProjectCard, SkillCard } from './modules/cards.js';
 
 const educationCards = [
     new EducationCard(
@@ -46,25 +43,24 @@ const projectCards = [
 
 const SkillCards = [
     new SkillCard(
-        'HTML',
-        'fa-html5'
+        './assets/images/skills/html-5.png'
     ),
 
     new SkillCard(
-        'CSS',
-        'fa-css3-alt'
+        './assets/images/skills/css-3.png'
     ),
 
     new SkillCard(
-        'JavaScript',
-        'fa-js'
+        './assets/images/skills/javascript.png'
     ),
 
     new SkillCard(
-        'PHP',
-        'fa-php'
+        './assets/images/skills/php.png'
     ),
-    
+
+    new SkillCard(
+        './assets/images/skills/mysql.png'
+    )
 ];
 
 setInterval(updateTime, 1000);

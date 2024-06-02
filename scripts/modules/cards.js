@@ -34,7 +34,7 @@ class Card {
     }
 }
 
-export class EducationCard extends Card {
+class EducationCard extends Card {
     constructor(title, startDate, endDate, major, description='') {
         super(title, description);
         this._startDate = startDate;
@@ -65,8 +65,8 @@ export class EducationCard extends Card {
     }
 }
 
-export class CertificationCard extends Card {
-    constructor(title, date, description='', link, imageSrc) {
+class CertificationCard extends Card {
+    constructor(title, date, description, link, imageSrc) {
         super(title, description);
         this._date = date;
         this._link = link;
@@ -102,10 +102,9 @@ export class CertificationCard extends Card {
 
         return card;
     }
-
 }
 
-export class ProjectCard extends Card {
+class ProjectCard extends Card {
     constructor(title, description, link, linkText, imageSrc='') {
         super(title, description);
         this._link = link;
@@ -140,24 +139,18 @@ export class ProjectCard extends Card {
     }
 }
 
-export class SkillCard {
-    constructor(title, icon, iconType='fa-brands') {
-        this._title = title;
-        this._icon = icon;
-        this._iconType = iconType;
+class SkillCard {
+    constructor(imageSrc) {
+        this._imageSrc = imageSrc;
     }
 
     createCard() {
         const card = document.createElement('article');
         card.classList.add('skill-card');
 
-        const title = document.createElement('h3');
-        title.textContent = this._title;
-        card.appendChild(title);
-
-        const icon = document.createElement('i');
-        icon.classList.add(`${this._iconType}`, `${this._icon}`); //fa-
-        card.appendChild(icon);
+        const image = document.createElement('img');
+        image.src = this._imageSrc;
+        card.appendChild(image);
 
         return card;
     }
@@ -172,3 +165,5 @@ export class SkillCard {
         }
     }
 }
+
+export { EducationCard, CertificationCard, ProjectCard, SkillCard };
