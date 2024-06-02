@@ -2,6 +2,7 @@ import { updatebirthday } from './modules/birthday.js';
 import { scrollDown100vh } from './modules/scrollDown100vh.js';
 import { updateTime } from './modules/time.js';
 import { EducationCard, CertificationCard, ProjectCard, SkillCard } from './modules/cards.js';
+import { submitContactForm } from './modules/emailJS.js';
 
 const educationCards = [
     new EducationCard(
@@ -66,6 +67,8 @@ const SkillCards = [
 setInterval(updateTime, 1000);
 scrollDown100vh();
 updatebirthday();
+
+submitContactForm();
 
 educationCards.forEach(card => {
     card.appendTo('education-cards');

@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-website-v2",
+  "version": "1.0.0",
+  "description": "een portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrick6018145/Portfolio-Website-V2.git"
+  },
+  "author": "Patrick Staats",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrick6018145/Portfolio-Website-V2/issues"
+  },
+  "homepage": "https://github.com/patrick6018145/Portfolio-Website-V2#readme",
+  "dependencies": {
+    "@emailjs/browser": "^4.3.3"
+  }
+}

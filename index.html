@@ -11,6 +11,14 @@
         <link rel="stylesheet" type="text/css" href="styles/style.css">
         <script src="https://kit.fontawesome.com/c1efbad309.js" crossorigin="anonymous"></script>
         <script type="module" src="scripts/index.js" defer></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+           (function(){
+              emailjs.init({
+                publicKey: "t0e66Xnl5h5Xg6mk1",
+              });
+           })();
+        </script>
     </head>
     <body>
         <header>
@@ -92,7 +100,20 @@
             <section class="Contact"> <!-- TODO: zorgen dat er een mail naar mij word gestuurd met behulp van php -->
                 <h2>Neem Contact op</h2>
                 <div class="contact-form">
-                    <form action=""></form>
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number">
+
+                        <label for="user_name">name</label>
+                        <input type="text" name="user_name" required>
+
+                        <label for="user_email">email</label>
+                        <input type="email" name="user_email" required>
+
+                        <label for="message">message</label>
+                        <textarea name="message" required></textarea>
+
+                        <input type="submit" value="Send">
+                    </form>
                 </div>
             </section>
         </main>
